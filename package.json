@@ -1,0 +1,34 @@
+{
+  "name": "cypressframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --spec cypress/integration/features/*.feature",
+    "html-report": "node cucumber-html-report.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://cepltmc.visualstudio.com/DefaultCollection/TaxCube/_git/TaxCube%20test%20suite"
+  },
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/stepDefinitions/*.ts",
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-reports/reports.json"
+    }
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress": "^12.1.0",
+    "mysql2": "^2.3.3",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  }
+}
